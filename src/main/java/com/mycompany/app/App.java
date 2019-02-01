@@ -84,8 +84,6 @@ public class App
         get("/", (req, res) -> "Hello, World");
 
         post("/compute", (req, res) -> {
-          //System.out.println(req.queryParams("input1"));
-          //System.out.println(req.queryParams("input2"));
 
           String input1 = req.queryParams("input1");
           java.util.Scanner sc1 = new java.util.Scanner(input1);
@@ -96,7 +94,6 @@ public class App
             int value = Integer.parseInt(sc1.next().replaceAll("\\s",""));
             inputList.add(value);
           }
-          //System.out.println(inputList);
           Integer[] inputArray = new Integer[inputList.size()];
           
           for (int i = 0; i < inputList.size(); i++) {
@@ -108,7 +105,7 @@ public class App
           java.util.Scanner sc2 = new java.util.Scanner(input2);
           sc2.useDelimiter("[;\r\n]+");
           java.util.ArrayList<Integer> inputList2 = new java.util.ArrayList<>();
-          while (sc1.hasNext())
+          while (sc2.hasNext())
           {
             int value = Integer.parseInt(sc2.next().replaceAll("\\s",""));
             inputList2.add(value);
